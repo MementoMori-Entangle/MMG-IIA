@@ -37,11 +37,11 @@ Google Drive APIの利用で以下対応
 サービス名、鍵ファイルのパス、画像ファイルアップロードフォルダIDは、  
 各自の環境に合わせてアプリ設定を書き換える必要あり
 
-アプリに必要なリソース(*1)  
+アプリに必要なリソース(※1)  
 ・キャラクター画像を認識するためのテンプレート画像  
-char_pm_gvs/*.bmp  
-char_icon/*.jpg  
+char_pm_gvs/xxx.bmp  
+char_icon/xxx.jpg  
 ・文字認識モデル  
 tessdata/jpn.traineddata
 
-(*1) Google Drive API(doc)で画像OCRするだけなら不要
+(※1) Google Drive API(doc)で画像OCRするだけなら不要
