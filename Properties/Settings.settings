@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MMG_IIA.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GoogleAPIApplicationName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">サービスアカウントで作成したサービス名</Value>
+    </Setting>
+    <Setting Name="GoogleAPICredentialsPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">サービスアカウントで作成した鍵(json形式)のファイルパスを指定</Value>
+    </Setting>
+    <Setting Name="GoogleAPIDriveParentId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">画像をアップロードするフォルダIDを指定</Value>
+    </Setting>
+    <Setting Name="TrainingModelLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">jpn</Value>
+    </Setting>
+    <Setting Name="OCRLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ja</Value>
+    </Setting>
+    <Setting Name="MATCH_THRESHOLD" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.8</Value>
+    </Setting>
+    <Setting Name="MATCH_TEMP_DIR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mTemp/</Value>
+    </Setting>
+    <Setting Name="MATCH_GUILDVS_CHARACTER_DIR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">char_pm_gvs/</Value>
+    </Setting>
+    <Setting Name="MATCH_TEMP_DIV_DIR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">div/</Value>
+    </Setting>
+    <Setting Name="FormationCharaImagePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">char_icon/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

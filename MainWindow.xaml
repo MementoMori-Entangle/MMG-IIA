@@ -1,0 +1,50 @@
+﻿<Window x:Class="MMG_IIA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MMG_IIA"
+        mc:Ignorable="d"
+        Title="MMG-ImageInputAnalyze" Height="570" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="画像入力" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxFilePath" HorizontalAlignment="Left" Margin="73,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="665" MouseDoubleClick="TextBoxFilePath_MouseDoubleClick"/>
+        <StackPanel Height="60" VerticalAlignment="Top">
+            <Button x:Name="ButtonAnalyze" Content="解析" HorizontalAlignment="Left" Margin="750,13,0,0" VerticalAlignment="Top" Click="ButtonAnalyze_Click"/>
+            <CheckBox x:Name="CheckBoxAutoConversion" Content="MMG-Format自動変換" HorizontalAlignment="Left" Margin="790,-17,0,0" VerticalAlignment="Top" IsChecked="True"/>
+            <ProgressBar x:Name="ProgressBar" IsIndeterminate="True" Visibility="Collapsed"  Height="10" Width="120" Margin="635,10,0,0"/>
+        </StackPanel>
+        <Label Content="学習モデル" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxTrainingModelFilePath" HorizontalAlignment="Left" Margin="75,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="700" IsEnabled="False" MouseDoubleClick="TextBoxTrainingModelFilePath_MouseDoubleClick"/>
+        <Label Content="OCR種別" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButtonGoogleDriveAPI" GroupName="OCR" Content="GoogleDriveAPI" HorizontalAlignment="Left" Margin="73,43,0,0" VerticalAlignment="Top" IsChecked="True" Checked="RadioButtonGoogleDriveAPI_Checked"/>
+        <RadioButton x:Name="RadioButtonTesseract" GroupName="OCR" Content="Tesseract" HorizontalAlignment="Left" Margin="185,43,0,0" VerticalAlignment="Top" Checked="RadioButtonTesseract_Checked"/>
+        <RadioButton x:Name="RadioButtonTesseractOCR" GroupName="OCR" Content="Tesseract-OCR" HorizontalAlignment="Left" Margin="265,43,0,0" VerticalAlignment="Top" Checked="RadioButtonTesseractOCR_Checked"/>
+        <Label Content="画像" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top"/>
+        <Grid Margin="10,169,0,0" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="350">
+            <Border BorderBrush="DimGray" BorderThickness="0.5" Margin="0,0,0,0">
+                <Image x:Name="ImageInput" HorizontalAlignment="Left" Height="350" VerticalAlignment="Top" Width="350" MouseLeftButtonUp="ImageInput_MouseLeftButtonUp" />
+            </Border>
+        </Grid>
+        <Label Content="OCR" HorizontalAlignment="Left" Margin="375,146,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer Height="350" HorizontalAlignment="Left" Margin="375,169,0,0"
+                  Name="scrollViewerOCR" VerticalAlignment="Top" Width="280">
+            <Border BorderBrush="DimGray" BorderThickness="0.5" Margin="0,0,0,0">
+                <TextBox x:Name="TextBoxOCR" AcceptsReturn="True" TextWrapping="Wrap" />
+            </Border>
+        </ScrollViewer>
+        <Label Content="MMG-Format" HorizontalAlignment="Left" Margin="691,146,0,0" VerticalAlignment="Top"/>
+        <ScrollViewer Height="350" HorizontalAlignment="Left" Margin="691,169,0,0"
+          Name="scrollViewerMMGFormat" VerticalAlignment="Top" Width="280">
+            <Border BorderBrush="DimGray" BorderThickness="0.5" Margin="0,0,0,0">
+                <TextBox x:Name="TextBoxMMGFormat" AcceptsReturn="True" TextWrapping="Wrap" />
+            </Border>
+        </ScrollViewer>
+        <Button x:Name="ButtonMMGFormatConversion" Content="変換" HorizontalAlignment="Left" Height="20" Margin="658,147,0,0" VerticalAlignment="Top" Width="30" Click="ButtonMMGFormatConversion_Click"/>
+        <CheckBox x:Name="CheckBoxCorrection" Content="補正" HorizontalAlignment="Left" Margin="778,152,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="CheckBoxCharacterMatching" Content="キャラクターマッチング" HorizontalAlignment="Left" Margin="15,103,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <TextBox x:Name="TextBoxCharacterMatchingFilePath" HorizontalAlignment="Left" Margin="136,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" MouseDoubleClick="TextBoxCharacterMatchingFilePath_MouseDoubleClick"/>
+        <Button x:Name="ButtonCharacterMatching" Content="マッチング" HorizontalAlignment="Left" Height="20" Margin="642,101,0,0" VerticalAlignment="Top" Width="50" Click="ButtonCharacterMatching_Click"/>
+        <CheckBox x:Name="CheckBoxCharacterMatchingView" Content="マッチング結果表示" HorizontalAlignment="Left" Margin="15,122,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
