@@ -44,4 +44,4 @@ char_icon/xxx.jpg
 ・文字認識モデル  
 tessdata/jpn.traineddata
 
-(※1) Google Drive API(doc)で画像OCRするだけなら不要
+(※1) Google Drive API(doc)で画像をOCRするだけなら不要
